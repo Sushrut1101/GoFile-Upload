@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Exit if No File is Specified
+if [[ "$#"  ==  '0' ]]; then
+echo  -e 'ERROR: No File Specified!' && exit 1
+fi
+
 # File to Upload
 FILE="@$1"
 
