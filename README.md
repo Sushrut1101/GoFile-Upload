@@ -17,6 +17,8 @@ You'll see the link after the Upload gets Complete
 ## Requirements:
 - ```curl``` and ```jq``` must be installed.
 
+##
+
 ### Credits:
 - https://gofile.io - For the Amazing Website to upload Unlimited files with Unlimited filesize to fast servers, for free!
 - [Sushrut1101](https://github.com/Sushrut1101) - To make the Script
