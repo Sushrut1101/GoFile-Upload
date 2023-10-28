@@ -9,7 +9,7 @@ fi
 FILE="@$1"
 
 # Find the Best server to upload
-SERVER=$(curl -s https://apiv2.gofile.io/getServer | jq  -r '.data|.server')
+SERVER=$(curl -s https://api.gofile.io/getServer | jq  -r '.data|.server')
 
 UPLOAD=$(curl -F file=${FILE} https://${SERVER}.gofile.io/uploadFile)
 
