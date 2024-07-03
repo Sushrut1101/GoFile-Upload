@@ -11,7 +11,7 @@ FILE="@$1"
 # Find the Best server to upload
 SERVER=$(curl -s https://api.gofile.io/getServer | jq  -r '.data|.server')
 
-LINK=$(curl -F "file=@${FILE}" https://${SERVER}.gofile.io/uploadFile | jq -r '.data|.downloadPage')
+LINK=$(curl -# -F "file=@${FILE}" https://${SERVER}.gofile.io/uploadFile | jq -r '.data|.downloadPage') 2>&1
 
 # Print the link!
 echo $LINK
