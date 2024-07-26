@@ -9,7 +9,7 @@ fi
 FILE="@$1"
 
 # Find the Best server to upload
-SERVER=$(curl -s https://api.gofile.io/getServer | jq  -r '.data|.server')
+SERVER=$(curl -s https://api.gofile.io/servers | jq -r '.data.servers[0].name')
 
 LINK=$(curl -# -F file=${FILE} https://${SERVER}.gofile.io/uploadFile | jq -r '.data|.downloadPage') 2>&1
 
